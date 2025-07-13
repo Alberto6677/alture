@@ -1,36 +1,86 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth bg-gradient-to-br from-orange-50 via-orange-100 to-white">
 <head>
   <meta charset="UTF-8" />
-  <title>Alture - Think together, laugh together</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alture — Think together, laugh together</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
+    /* Custom font style */
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 2rem;
-      background: #f0f0f0;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    h1 {
-      color: #ff6600;
+    /* Smooth fade-in */
+    .fade-in {
+      animation: fadeIn 1.2s ease forwards;
+      opacity: 0;
     }
-    button {
-      background: #ff6600;
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #e05500;
+    @keyframes fadeIn {
+      to { opacity: 1; }
     }
   </style>
 </head>
-<body>
-  <h1>Bienvenue chez Alture</h1>
-  <p>Think together, laugh together</p>
-  <button onclick="alert('Merci de rejoindre Alture !')">Je rejoins Alture</button>
+<body class="min-h-screen flex flex-col justify-center items-center p-6 text-gray-800">
+
+  <!-- Logo & Title -->
+  <header class="mb-10 text-center fade-in">
+    <div class="flex items-center justify-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-rocket w-12 h-12 text-orange-500 animate-bounce" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" >
+        <path d="M14 2l7 7-7 7-7-7 7-7z" />
+        <path d="M7 17L4 20l3 3 3-3-3-3z" />
+      </svg>
+      <h1 class="text-5xl font-extrabold text-orange-600 select-none">Alture</h1>
+    </div>
+    <p class="mt-2 text-lg font-semibold text-orange-400 italic">Think together, laugh together</p>
+  </header>
+
+  <!-- Catchphrase -->
+  <section class="max-w-xl text-center mb-12 fade-in" style="animation-delay: 0.3s;">
+    <p class="text-xl leading-relaxed">
+      Un espace où les rêveurs se retrouvent pour créer, partager, et bâtir un monde plus beau.<br/>
+      Pas pour l’argent, pas pour la gloire, mais pour <span class="font-bold text-orange-600">nous</span>.
+    </p>
+  </section>
+
+  <!-- Call to action -->
+  <section class="fade-in" style="animation-delay: 0.6s;">
+    <button
+      id="joinBtn"
+      class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-xl text-lg font-semibold shadow-lg transition-transform active:scale-95 flex items-center space-x-3"
+      aria-label="Rejoindre Alture"
+    >
+      <lucide-user-plus class="w-6 h-6" />
+      <span>Je rejoins Alture</span>
+    </button>
+  </section>
+
+  <!-- Footer with icons -->
+  <footer class="mt-16 text-gray-500 flex space-x-6 fade-in" style="animation-delay: 0.9s;">
+    <a href="https://www.youtube.com/channel/UCAlture" target="_blank" aria-label="YouTube Alture" class="hover:text-orange-600 transition">
+      <lucide-youtube class="w-6 h-6" />
+    </a>
+    <a href="https://discord.gg/Alture" target="_blank" aria-label="Discord Alture" class="hover:text-indigo-600 transition">
+      <lucide-discord class="w-6 h-6" />
+    </a>
+    <a href="https://twitter.com/AltureOfficial" target="_blank" aria-label="Twitter Alture" class="hover:text-sky-500 transition">
+      <lucide-twitter class="w-6 h-6" />
+    </a>
+  </footer>
+
+  <script>
+    // Inject Lucide icons (this script replaces <lucide-*> with SVG icons)
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.replace();
+    });
+
+    // Action on Join button
+    document.getElementById('joinBtn').addEventListener('click', () => {
+      // Remplace le lien par ton formulaire ou page d’inscription
+      const formUrl = 'https://forms.gle/EXEMPLE_LIEN_ALTURE';
+      window.open(formUrl, '_blank');
+    });
+  </script>
+
 </body>
 </html>

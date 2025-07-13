@@ -22,19 +22,24 @@
 <body class="text-slate-800">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow sticky top-0 z-50">
+  <nav class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
         <div class="flex items-center space-x-3">
           <img src="assets/alture-logo.png" alt="Alture" class="w-7 h-7">
           <span class="font-bold text-xl text-blue-700 select-none">Alture</span>
         </div>
-        <div class="hidden md:flex space-x-8">
-          <a href="#" class="text-sm font-medium text-blue-700 hover:text-blue-500">Accueil</a>
-          <a href="#rejoindre" class="text-sm font-medium text-blue-700 hover:text-blue-500">Rejoindre</a>
-          <a href="#apropos" class="text-sm font-medium text-blue-700 hover:text-blue-500">À propos</a>
+        <!-- Desktop menu -->
+        <div class="hidden md:flex space-x-6">
+          <a href="index.html" class="text-sm font-medium text-blue-700 hover:text-blue-500">Accueil</a>
+          <a href="apropos.html" class="text-sm font-medium text-blue-700 hover:text-blue-500">À propos</a>
+          <a href="rejoindre.html" class="text-sm font-medium text-blue-700 hover:text-blue-500">Rejoindre</a>
+          <a href="membres.html" class="text-sm font-medium text-blue-700 hover:text-blue-500">Membres</a>
+          <a href="nouvelles.html" class="text-sm font-medium text-blue-700 hover:text-blue-500">Nouvelles</a>
+          <a href="projets.html" class="text-sm font-medium text-blue-700 hover:text-blue-500">Projets</a>
         </div>
-        <!-- Mobile menu button -->
+        <!-- Mobile hamburger -->
         <div class="md:hidden">
           <button id="menuBtn" class="text-blue-700 focus:outline-none">
             <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor">
@@ -46,52 +51,30 @@
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-2">
-      <a href="#" class="block text-blue-700 hover:text-blue-500">Accueil</a>
-      <a href="#rejoindre" class="block text-blue-700 hover:text-blue-500">Rejoindre</a>
-      <a href="#apropos" class="block text-blue-700 hover:text-blue-500">À propos</a>
+    <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 space-y-2 bg-white shadow-inner">
+      <a href="index.html" class="block text-blue-700 hover:text-blue-500">Accueil</a>
+      <a href="apropos.html" class="block text-blue-700 hover:text-blue-500">À propos</a>
+      <a href="rejoindre.html" class="block text-blue-700 hover:text-blue-500">Rejoindre</a>
+      <a href="membres.html" class="block text-blue-700 hover:text-blue-500">Membres</a>
+      <a href="nouvelles.html" class="block text-blue-700 hover:text-blue-500">Nouvelles</a>
+      <a href="projets.html" class="block text-blue-700 hover:text-blue-500">Projets</a>
     </div>
   </nav>
 
-  <!-- Hero section -->
-  <section class="text-center py-20 px-4 fade-in">
-    <h1 class="text-4xl sm:text-5xl font-bold text-blue-800">Alture</h1>
-    <p class="mt-4 text-lg sm:text-xl text-blue-500">Think together, laugh together</p>
-    <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
-      Alture, c’est un monde plus humain, plus sincère.  
-      Un projet libre, sans pub, sans mensonge —  
-      juste des gens qui rêvent ensemble, à petite ou grande échelle.
+  <!-- Accueil -->
+  <section class="text-center py-24 px-4 fade-in">
+    <h1 class="text-5xl font-bold text-blue-800">Bienvenue chez Alture</h1>
+    <p class="mt-4 text-xl text-blue-500">Think together, laugh together</p>
+    <p class="mt-6 max-w-2xl mx-auto text-gray-700">
+      Alture, c’est une vision, un projet humain, libre et sincère.  
+      Ici, pas de pub, pas de mensonge.  
+      Seulement des gens qui construisent un monde plus beau, ensemble.
     </p>
-    <a href="#rejoindre">
-      <button class="mt-8 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl text-lg font-semibold shadow transition">
-        Je rejoins Alture
+    <a href="rejoindre.html">
+      <button class="mt-10 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl text-lg font-semibold shadow transition">
+        Rejoindre Alture
       </button>
     </a>
-  </section>
-
-  <!-- Section Rejoindre -->
-  <section id="rejoindre" class="bg-blue-50 py-16 text-center px-6">
-    <h2 class="text-3xl font-bold text-blue-700 mb-4">Rejoindre le mouvement</h2>
-    <p class="text-gray-700 max-w-xl mx-auto mb-6">
-      Clique sur le bouton ci-dessous et fais partie des premiers Alturiens.  
-      Même si on est 10, on créera un monde plus beau ensemble. 🌍
-    </p>
-    <a href="https://forms.gle/TON_LIEN_ALTURE" target="_blank">
-      <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl text-lg font-medium shadow-lg transition">
-        Rejoindre Alture maintenant
-      </button>
-    </a>
-  </section>
-
-  <!-- À propos -->
-  <section id="apropos" class="py-16 px-6 text-center">
-    <h2 class="text-3xl font-bold text-blue-700 mb-4">À propos d’Alture</h2>
-    <p class="text-gray-700 max-w-2xl mx-auto">
-      Alture est né de la volonté d’un jeune créateur, Alberto67,  
-      qui croit qu’un internet plus propre, plus juste, et plus joyeux est possible.  
-      Pas besoin d’être une multinationale pour illuminer le monde.  
-      Il suffit d’un feu. 🔥
-    </p>
   </section>
 
   <!-- Footer -->
@@ -107,7 +90,7 @@
         <lucide-twitter class="w-5 h-5" />
       </a>
     </div>
-    <p>© 2025 Alture. Un monde plus beau commence ici.</p>
+    <p>© 2025 Alture. Créé avec passion par Alberto67.</p>
   </footer>
 
   <!-- Scripts -->
@@ -115,12 +98,16 @@
     lucide.replace();
 
     const menuBtn = document.getElementById('menuBtn');
+    const menuIcon = document.getElementById('menuIcon');
     const mobileMenu = document.getElementById('mobileMenu');
-    let isOpen = false;
+    let menuOpen = false;
 
     menuBtn.addEventListener('click', () => {
-      isOpen = !isOpen;
-      mobileMenu.classList.toggle('hidden', !isOpen);
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle('hidden', !menuOpen);
+      menuIcon.innerHTML = menuOpen
+        ? `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>`
+        : `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>`;
     });
   </script>
 

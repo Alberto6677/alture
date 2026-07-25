@@ -6,7 +6,7 @@
   <title>Alture</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide"></script>
-
+  <link rel="icon" href="assets/logo.png" type="image/png" />
   <style>
 
     @keyframes fadeUp {
@@ -37,18 +37,6 @@
     .card:nth-child(3) { animation-delay: 0.3s; }
     .card:nth-child(4) { animation-delay: 0.4s; }
   </style>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            warm: '#5793f2',
-          }
-        }
-      }
-    }
-  </script>
 </head>
 <body class="text-gray-100 select-none">
 
@@ -71,7 +59,7 @@
   <section class="hero max-w-7xl mx-auto px-6 pt-32 pb-24">
     <h1 class="text-6xl font-bold mb-8 leading-tight tracking-tight">
       Imaginer & créer,
-      <span class="text-warm">ensemble</span>
+      <span class="text-blue-500">ensemble</span>
     </h1>
 
     <p class="text-2xl text-gray-400 leading-relaxed mb-12 max-w-3xl">
@@ -79,10 +67,10 @@
     </p>
 
     <div class="flex flex-wrap gap-4 items-center">
-      <a href="#code" class="px-8 py-4 bg-warm rounded-xl font-semibold hover:scale-105 hover:shadow-2xl hover:shadow-warm/20">
+      <a href="https://forms.gle/895TxeMsBPCxAMfs9" target="blank_" class="px-8 py-4 bg-blue-500 rounded-xl font-semibold hover:bg-blue-400">
         Nous rejoindre
       </a>
-      <a href="#manifeste" class="px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-semibold hover:bg-white/10 hover:scale-105">
+      <a href="#manifeste" class="px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-semibold hover:bg-white/10">
         En apprendre plus
       </a>
     </div>
@@ -97,32 +85,32 @@
     <h2 class="text-5xl font-bold mb-16">Notre manifeste</h2>
 
     <div class="grid md:grid-cols-2 gap-6">
-      <div class="card bg-white/5 border border-white/10 p-10 rounded-2xl hover:scale-105 hover:shadow-2xl group">
-        <i data-lucide="star" class="w-10 h-10 text-warm mb-6 group-hover:scale-110"></i>
+      <div class="card bg-white/5 border border-white/10 p-10 rounded-2xl">
+        <i data-lucide="star" class="w-10 h-10 text-blue-500 mb-6"></i>
         <h3 class="text-2xl font-bold mb-4">Nous sommes authentiques</h3>
         <p class="text-gray-400 leading-relaxed text-lg">
           Nous n'utilisons pas d'IA, et on parle clairement, pas de friction inutile.
         </p>
       </div>
 
-      <div class="card bg-white/5 border border-white/10 p-10 rounded-2xl hover:scale-105 hover:shadow-2xl group">
-        <i data-lucide="lightbulb" class="w-10 h-10 text-warm mb-6 group-hover:scale-110"></i>
+      <div class="card bg-white/5 border border-white/10 p-10 rounded-2xl">
+        <i data-lucide="lightbulb" class="w-10 h-10 text-blue-500 mb-6"></i>
         <h3 class="text-2xl font-bold mb-4">Nous sommes créatifs</h3>
         <p class="text-gray-400 leading-relaxed text-lg">
           Nous créons des projets créatifs et originaux, utiles pour tous.
         </p>
       </div>
 
-      <div class="card bg-white/5 border border-white/10 p-10 rounded-2xl hover:scale-105 hover:shadow-2xl group">
-        <i data-lucide="shapes" class="w-10 h-10 text-warm mb-6 group-hover:scale-110"></i>
+      <div class="card bg-white/5 border border-white/10 p-10 rounded-2xl">
+        <i data-lucide="shapes" class="w-10 h-10 text-blue-500 mb-6"></i>
         <h3 class="text-2xl font-bold mb-4">Nous sommes différents</h3>
         <p class="text-gray-400 leading-relaxed text-lg">
           Vous ne serez jamais le produit au contraire vous nous aider a le construire ensemble.
         </p>
       </div>
 
-      <div class="card bg-white/5 border border-white/10 p-10 rounded-2xl hover:scale-105 hover:shadow-2xl group">
-        <i data-lucide="heart-handshake" class="w-10 h-10 text-warm mb-6 group-hover:scale-110"></i>
+      <div class="card bg-white/5 border border-white/10 p-10 rounded-2xl">
+        <i data-lucide="heart-handshake" class="w-10 h-10 text-blue-500 mb-6"></i>
         <h3 class="text-2xl font-bold mb-4">Nous sommes humains</h3>
         <p class="text-gray-400 leading-relaxed text-lg">
             Comme vous nous sommes humains, on se parle et on se comprend mutuellement.
@@ -141,16 +129,16 @@
     <p class="text-xl text-gray-400 mb-16">Voici quelques uns de nos projets.</p>
     
     <div class="grid md:grid-cols-2 gap-6 mb-8">
-        <a href="https://rooweb.onrender.com" target="blank_" class="card bg-white/5 border border-white/10 p-10 rounded-2xl hover:scale-105 hover:shadow-2xl group">
-            <i data-lucide="earth" class="w-10 h-10 text-warm mb-6 group-hover:scale-110"></i>
+        <a href="https://rooweb.onrender.com" target="blank_" class="card bg-white/5 border border-white/10 p-10 rounded-2xl">
+            <i data-lucide="earth" class="w-10 h-10 text-blue-500 mb-6"></i>
             <h3 class="text-2xl font-bold mb-4">RooWeb</h3>
             <p class="text-gray-400 leading-relaxed text-lg">
                 Nous créons des projets créatifs et originaux, utiles pour tous.
             </p>
         </a>
         
-        <a href="https://myalture.onrender.com" target="blank_" class="card bg-white/5 border border-white/10 p-10 rounded-2xl hover:scale-105 hover:shadow-2xl group">
-            <i data-lucide="users" class="w-10 h-10 text-warm mb-6 group-hover:scale-110"></i>
+        <a href="https://myalture.onrender.com" target="blank_" class="card bg-white/5 border border-white/10 p-10 rounded-2xl">
+            <i data-lucide="users" class="w-10 h-10 text-blue-500 mb-6"></i>
             <h3 class="text-2xl font-bold mb-4">myAlture</h3>
             <p class="text-gray-400 leading-relaxed text-lg">
                 Nous créons des projets créatifs et originaux, utiles pour tous.
@@ -172,7 +160,9 @@
   <section id="join" class="max-w-6xl mx-auto px-6 py-32">
     <h2 class="text-5xl font-bold mb-4">Rejoignez l'équipe</h2>
     <p class="text-xl text-gray-400 mb-16">Envie de nous aider ? De créer ce qui vous plaît ? Rejoignez Alture.</p>
-    
+    <a href="https://forms.gle/895TxeMsBPCxAMfs9" target="blank_" class="px-8 py-4 bg-blue-500 rounded-xl font-semibold">
+        Nous rejoindre
+    </a>
     
   </section>
 
@@ -189,10 +179,10 @@
         </div>
 
         <div class="flex gap-8 text-gray-400">
-          <a href="/projects" class="hover:text-white hover:scale-110 flex items-center gap-2">
+          <a href="/projects" class="hover:text-white flex items-center gap-2">
             Nos projets
           </a>
-          <a href="https://forms.gle/895TxeMsBPCxAMfs9" target="_blank" class="hover:text-white hover:scale-110 flex items-center gap-2">
+          <a href="https://forms.gle/895TxeMsBPCxAMfs9" target="_blank" class="hover:text-white flex items-center gap-2">
             Nous rejoindre
           </a>
         </div>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alture</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide"></script>
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <style>
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    * {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+      background: linear-gradient(180deg, #0a0a0a 0%, #141414 100%);
+    }
+
+    .card {
+      animation: fadeUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+    
+    .hero {
+        animation: fadeUp 0.6s ease-out forwards;
+        opacity: 0;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+    .card:nth-child(4) { animation-delay: 0.4s; }
+  </style>
+</head>
+<body class="text-gray-100 select-none">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-black/60 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-2 group">
+        <img class="w-8 h-8" src="assets/logo.png"></img>
+        <span class="text-xl font-semibold">Alture</span>
+      </div>
+
+      <nav class="flex gap-10 text-sm text-gray-400">
+        <a href="https://alture.onrender.com" class="hover:text-white">Page d'accueil</a>
+        <a href="https://forms.gle/895TxeMsBPCxAMfs9" target="blank_" class="hover:text-white">Nous rejoindre</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Projects -->
+  <div class="max-w-6xl mx-auto px-6 py-32">
+    <h2 class="text-5xl font-bold mb-4">Tous nos projets</h2>
+    
+    <div class="grid md:grid-cols-2 gap-6 mt-16 mb-8">
+        <a href="https://rooweb.onrender.com" target="blank_" class="card bg-white/5 border border-white/10 p-10 rounded-2xl">
+            <i data-lucide="earth" class="w-10 h-10 text-blue-500 mb-6"></i>
+            <h3 class="text-2xl font-bold mb-4">RooWeb</h3>
+            <p class="text-gray-400 leading-relaxed text-lg">
+                Un site où l'on peut créer son propre site, visiter ceux des autres et partager tes sites préférés.
+            </p>
+        </a>
+        
+        <a href="https://myalture.onrender.com" target="blank_" class="card bg-white/5 border border-white/10 p-10 rounded-2xl">
+            <i data-lucide="users" class="w-10 h-10 text-blue-500 mb-6"></i>
+            <h3 class="text-2xl font-bold mb-4">myAlture</h3>
+            <p class="text-gray-400 leading-relaxed text-lg">
+                Un système de compte social simple mais efficace pour tout nos services et projets.
+            </p>
+        </a>
+
+        <a href="https://lunascript.onrender.com" target="blank_" class="card bg-white/5 border border-white/10 p-10 rounded-2xl">
+            <i data-lucide="moon" class="w-10 h-10 text-blue-500 mb-6"></i>
+            <h3 class="text-2xl font-bold mb-4">LunaScript</h3>
+            <p class="text-gray-400 leading-relaxed text-lg">
+                Un language de programmation inspiré de JavaScript mais en français pour éviter de traduire en codant.
+            </p>
+        </a>
+
+        <a href="https://lunascript.onrender.com" target="blank_" class="card bg-white/5 border border-white/10 p-10 rounded-2xl">
+            <i data-lucide="gamepad-2" class="w-10 h-10 text-blue-500 mb-6"></i>
+            <h3 class="text-2xl font-bold mb-4">Horizons</h3>
+            <p class="text-gray-400 leading-relaxed text-lg">
+                Plus d'infos bientôt !
+            </p>
+        </a>
+    </div>
+
+    <div class="flex justify-center w-full px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-semibold">
+        Plus de projets bientôt !
+    </div>
+    
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-row justify-between items-center gap-8">
+        <div class="flex items-center gap-4 group">
+            <img class="w-8 h-8" src="assets/logo.png"></img>
+          <div>
+            <div class="text-xl font-semibold">Alture</div>
+            <div class="text-gray-500">Par MrAlberto</div>
+          </div>
+        </div>
+
+        <div class="flex gap-8 text-gray-400">
+          <a href="https://alture.ornender.com" class="hover:text-white flex items-center gap-2">
+            Page d'accueil
+          </a>
+          <a href="https://forms.gle/895TxeMsBPCxAMfs9" target="_blank" class="hover:text-white flex items-center gap-2">
+            Nous rejoindre
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

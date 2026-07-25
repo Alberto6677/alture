@@ -1,165 +1,207 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth
-">
+<html lang="fr" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alture – Think together, laugh together</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alture</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Fredoka:wght@400;700&display=swap&family=Momo Trust Display:wght@400;700&display=swap&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide"></script>
+
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-    }
-    .fade-up {
-      animation: fadeUp 1s ease forwards;
-      opacity: 0;
-      transform: translateY(20px);
-    }
+
     @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
+
+    * {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+      background: linear-gradient(180deg, #0a0a0a 0%, #141414 100%);
+    }
+
+    .card {
+      animation: fadeUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+    
+    .hero {
+        animation: fadeUp 0.6s ease-out forwards;
+        opacity: 0;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+    .card:nth-child(4) { animation-delay: 0.4s; }
   </style>
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            fredoka: ['Fredoka', 'sans-serif'],
-            baloo: ['"Baloo 2"', 'sans-serif'],
-            mtd: ['"Momo Trust Display"', 'sans-serif'],
-            rubik: ['"Rubik"', 'sans-serif'],
-          },
-        },
-      },
+          colors: {
+            warm: '#5793f2',
+          }
+        }
+      }
     }
   </script>
 </head>
-<body class="text-slate-800 font-rubik dark:bg-amber-600">
+<body class="text-gray-100 select-none">
 
-  <!-- Navbar -->
-  <nav class="bg-white/80 dark:bg-zinc-900 backdrop-blur-md shadow-sm sticky top-0 z-50 rounded-b-xl transition">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
-        <!-- Logo -->
-        <div class="flex items-center space-x-3">
-          <span class="font-bold text-xl text-blue-700 font-rubik dark:text-amber-600 select-none">Alture</span>
-        </div>
-        <!-- Desktop menu -->
-        <div class="hidden md:flex space-x-6 p-2">
-          <a href="index.html" class="text-sm font-medium text-blue-700 dark:text-amber-600 rounded-md dark:hover:bg-amber-600 hover:text-white hover:bg-blue-500 p-2 transition">Accueil</a>
-          <a href="apropos.html" class="text-sm font-medium text-slate-600 rounded-md hover:text-white dark:hover:bg-amber-600 hover:bg-blue-500 p-2 transition">À propos</a>
-          <a href="rejoindre.html" class="text-sm font-medium text-slate-600 rounded-md hover:text-white dark:hover:bg-amber-600 hover:bg-blue-500 p-2 transition">Rejoindre</a>
-          <a href="membres.html" class="text-sm font-medium text-slate-600 rounded-md hover:text-white dark:hover:bg-amber-600 hover:bg-blue-500 p-2 transition">Membres</a>
-          <a href="nouvelles.html" class="text-sm font-medium text-slate-600 rounded-md hover:text-white dark:hover:bg-amber-600 hover:bg-blue-500 p-2 transition">Nouvelles</a>
-          <a href="projets.html" class="text-sm font-medium text-slate-600 rounded-md hover:text-white dark:hover:bg-amber-600 hover:bg-blue-500 p-2 transition">Projets</a>
-        </div>
-        <!-- Mobile hamburger -->
-        <div class="md:hidden">
-          <button id="menuBtn" class="text-blue-700 dark:text-amber-600 focus:outline-none">
-            <i data-lucide="menu"></i>
-          </button>
-        </div>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-black/60 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-2 group">
+        <img class="w-8 h-8" src="assets/logo.png"></img>
+        <span class="text-xl font-semibold">Alture</span>
       </div>
+
+      <nav class="flex gap-10 text-sm text-gray-400">
+        <a href="/projects" class="hover:text-white">Nos projets</a>
+        <a href="https://forms.gle/895TxeMsBPCxAMfs9" target="blank_" class="hover:text-white">Nous rejoindre</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero max-w-7xl mx-auto px-6 pt-32 pb-24">
+    <h1 class="text-6xl font-bold mb-8 leading-tight tracking-tight">
+      Imaginer & créer,
+      <span class="text-warm">ensemble</span>
+    </h1>
+
+    <p class="text-2xl text-gray-400 leading-relaxed mb-12 max-w-3xl">
+      Pourquoi pour pouvoir coder on devrait connaitre une langue étrangère et devoir traduire tout le temps ?
+    </p>
+
+    <div class="flex flex-wrap gap-4 items-center">
+      <a href="#code" class="px-8 py-4 bg-warm rounded-xl font-semibold hover:scale-105 hover:shadow-2xl hover:shadow-warm/20">
+        Nous rejoindre
+      </a>
+      <a href="#manifeste" class="px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-semibold hover:bg-white/10 hover:scale-105">
+        En apprendre plus
+      </a>
+    </div>
+  </section>
+  
+  <a href="#manifeste" class="flex text-gray-400 justify-center">
+      <i data-lucide="chevrons-down"></i>
+  </a>
+
+  <!-- Manifest -->
+  <section id="manifeste" class="max-w-6xl mx-auto px-6 py-32">
+    <h2 class="text-5xl font-bold mb-16">Notre manifeste</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card bg-white/5 border border-white/10 p-10 rounded-2xl hover:scale-105 hover:shadow-2xl group">
+        <i data-lucide="star" class="w-10 h-10 text-warm mb-6 group-hover:scale-110"></i>
+        <h3 class="text-2xl font-bold mb-4">Nous sommes authentiques</h3>
+        <p class="text-gray-400 leading-relaxed text-lg">
+          Nous n'utilisons pas d'IA, et on parle clairement, pas de friction inutile.
+        </p>
+      </div>
+
+      <div class="card bg-white/5 border border-white/10 p-10 rounded-2xl hover:scale-105 hover:shadow-2xl group">
+        <i data-lucide="lightbulb" class="w-10 h-10 text-warm mb-6 group-hover:scale-110"></i>
+        <h3 class="text-2xl font-bold mb-4">Nous sommes créatifs</h3>
+        <p class="text-gray-400 leading-relaxed text-lg">
+          Nous créons des projets créatifs et originaux, utiles pour tous.
+        </p>
+      </div>
+
+      <div class="card bg-white/5 border border-white/10 p-10 rounded-2xl hover:scale-105 hover:shadow-2xl group">
+        <i data-lucide="shapes" class="w-10 h-10 text-warm mb-6 group-hover:scale-110"></i>
+        <h3 class="text-2xl font-bold mb-4">Nous sommes différents</h3>
+        <p class="text-gray-400 leading-relaxed text-lg">
+          Vous ne serez jamais le produit au contraire vous nous aider a le construire ensemble.
+        </p>
+      </div>
+
+      <div class="card bg-white/5 border border-white/10 p-10 rounded-2xl hover:scale-105 hover:shadow-2xl group">
+        <i data-lucide="heart-handshake" class="w-10 h-10 text-warm mb-6 group-hover:scale-110"></i>
+        <h3 class="text-2xl font-bold mb-4">Nous sommes humains</h3>
+        <p class="text-gray-400 leading-relaxed text-lg">
+            Comme vous nous sommes humains, on se parle et on se comprend mutuellement.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <a href="#projects" class="flex text-gray-400 justify-center">
+      <i data-lucide="chevrons-down"></i>
+  </a>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-32">
+    <h2 class="text-5xl font-bold mb-4">Nos projets</h2>
+    <p class="text-xl text-gray-400 mb-16">Voici quelques uns de nos projets.</p>
+    
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <a href="https://rooweb.onrender.com" target="blank_" class="card bg-white/5 border border-white/10 p-10 rounded-2xl hover:scale-105 hover:shadow-2xl group">
+            <i data-lucide="earth" class="w-10 h-10 text-warm mb-6 group-hover:scale-110"></i>
+            <h3 class="text-2xl font-bold mb-4">RooWeb</h3>
+            <p class="text-gray-400 leading-relaxed text-lg">
+                Nous créons des projets créatifs et originaux, utiles pour tous.
+            </p>
+        </a>
+        
+        <a href="https://myalture.onrender.com" target="blank_" class="card bg-white/5 border border-white/10 p-10 rounded-2xl hover:scale-105 hover:shadow-2xl group">
+            <i data-lucide="users" class="w-10 h-10 text-warm mb-6 group-hover:scale-110"></i>
+            <h3 class="text-2xl font-bold mb-4">myAlture</h3>
+            <p class="text-gray-400 leading-relaxed text-lg">
+                Nous créons des projets créatifs et originaux, utiles pour tous.
+            </p>
+        </a>
     </div>
     
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="hidden md:hidden text-center p-4 space-y-2 dark:bg-zinc-900 rounded-b-xl">
-      <a href="index.html" class="block text-blue-700 dark:text-amber-600 hover:bg-blue-500 p-1 rounded-md hover:text-white fade-up hover:dark:bg-amber-600 transition">Accueil</a>
-      <a href="apropos.html" class="block text-slate-600 hover:bg-blue-500 p-1 rounded-md hover:text-white hover:dark:bg-amber-600 fade-up transition">À propos</a>
-      <a href="rejoindre.html" class="block text-slate-600 hover:bg-blue-500 p-1 rounded-md hover:text-white hover:dark:bg-amber-600 fade-up transition">Rejoindre</a>
-      <a href="membres.html" class="block text-slate-600 hover:bg-blue-500 p-1 rounded-md hover:text-white hover:dark:bg-amber-600 fade-up transition">Membres</a>
-      <a href="nouvelles.html" class="block text-slate-600 hover:bg-blue-500 p-1 rounded-md hover:text-white hover:dark:bg-amber-600 fade-up transition">Nouvelles</a>
-      <a href="projets.html" class="block text-slate-600 hover:bg-blue-500 p-1 rounded-md hover:text-white hover:dark:bg-amber-600 fade-up transition">Projets</a>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <section class="relative text-center py-32 px-4 bg-gradient-to-b from-blue-50 to-white dark:from-amber-600 dark:to-zinc-900">
-    <h1 class="text-5xl md:text-6xl font-extrabold text-blue-800 font-baloo dark:text-white fade-up">Bienvenue chez Alture</h1>
-    <p class="mt-4 text-xl md:text-2xl text-blue-500 font-baloo dark:text-zinc-200 fade-up" style="animation-delay: 0.2s">
-      Think together, laugh together
-    </p>
-    <p class="mt-6 max-w-2xl mx-auto text-gray-700 dark:text-zinc-300 font-baloo fade-up" style="animation-delay: 0.4s">
-      Alture, c’est une vision, un projet humain, libre et sincère.  
-      Ici, pas de pub, pas de mensonge.  
-      Seulement des gens qui construisent un monde plus beau, ensemble.
-    </p>
-    <a href="rejoindre.html">
-      <button class="mt-10 bg-gradient-to-r font-rubik dark:from-amber-800 dark:to-amber-900 from-blue-600 hover:dark:from-amber-500 hover:dark:to-amber-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-10 py-4 rounded-xl text-lg font-semibold shadow-lg transition transform hover:scale-105 fade-up" style="animation-delay: 0.6s">
-        Rejoindre Alture
-      </button>
+    <a href="/projects" class="flex justify-center w-full px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-semibold">
+        Voir tout nos projets
     </a>
+    
+  </section>
+  
+  <a href="#join" class="flex text-gray-400 justify-center">
+      <i data-lucide="chevrons-down"></i>
+  </a>
+
+  <!-- Join us -->
+  <section id="join" class="max-w-6xl mx-auto px-6 py-32">
+    <h2 class="text-5xl font-bold mb-4">Rejoignez l'équipe</h2>
+    <p class="text-xl text-gray-400 mb-16">Envie de nous aider ? De créer ce qui vous plaît ? Rejoignez Alture.</p>
+    
+    
   </section>
 
-  <!-- Pourquoi Alture -->
-  <section class="py-20 px-6 dark:bg-zinc-900 ">
-    <div class="max-w-6xl grid md:grid-cols-3 gap-12 mx-auto text-center">
-      <div>
-        <i data-lucide="heart-handshake" class="w-12 h-12 text-blue-600 dark:text-amber-600 mx-auto"></i>
-        <h3 class="font-semibold text-xl dark:text-amber-600 font-baloo text-blue-800 pb-2">Communauté sincère</h3>
-        <p class="text-gray-600 font-rubik">On est la pour s'entraider pas se faire la guerre !</p>
-      </div>
-      <div class="space-y-4">
-        <i data-lucide="hand-helping" class="w-12 h-12 text-blue-600 dark:text-amber-600 mx-auto"></i>
-        <h3 class="font-semibold text-xl dark:text-amber-600 font-baloo text-blue-800">Rire & partage</h3>
-        <p class="text-gray-600 font-rubik">Un espace où la joie et la créativité s’expriment librement.</p>
-      </div>
-      <div class="space-y-4">
-        <i data-lucide="earth" class="w-12 h-12 text-blue-600 dark:text-amber-600 mx-auto"></i>
-        <h3 class="font-semibold text-xl dark:text-amber-600 font-baloo text-blue-800">Construire ensemble</h3>
-        <p class="text-gray-600 font-rubik">Imaginer et bâtir un monde plus beau, étape par étape.</p>
-      </div>
-      <div class="space-y-4">
-        <i data-lucide="message-circle-warning" class="w-12 h-12 dark:text-amber-600 text-blue-600 mx-auto"></i>
-        <h3 class="font-semibold text-xl dark:text-amber-600 font-baloo text-blue-800">Votre voix compte</h3>
-        <p class="text-gray-600 font-rubik">Si vous avez des questions des idées n'hésitez pas !</p>
-      </div>
-      <div class="space-y-4">
-        <i data-lucide="graduation-cap" class="w-12 h-12 text-blue-600 dark:text-amber-600 mx-auto"></i>
-        <h3 class="font-semibold text-xl dark:text-amber-600 font-baloo text-blue-800">Apprendre ensemble</h3>
-        <p class="text-gray-600 font-rubik">Chaque jour, on découvre, on teste, on se trompe et on progresse… mais toujours ensemble</p>
-      </div>
-      <div class="space-y-4">
-        <i data-lucide="pencil-ruler" class="w-12 h-12 text-blue-600 dark:text-amber-600 mx-auto"></i>
-        <h3 class="font-semibold text-xl dark:text-amber-600 font-baloo text-blue-800">Créativité sans limite</h3>
-        <p class="text-gray-600 font-rubik">Un endroit où les idées farfelues et les projets fous trouvent leur place !</p>
-      </div>
-    </div>
-  </section>
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-row justify-between items-center gap-8">
+        <div class="flex items-center gap-4 group">
+            <img class="w-8 h-8" src="assets/logo.png"></img>
+          <div>
+            <div class="text-xl font-semibold">Alture</div>
+            <div class="text-gray-500">Par MrAlberto</div>
+          </div>
+        </div>
 
-  <!-- Footer -->
-  <div class="dark:bg-zinc-900 font-baloo p-4">
-  <footer class="bg-blue-100 dark:bg-zinc-800 m-1 py-8 text-center text-sm rounded-xl text-gray-600 dark:text-white">
-    <div class="flex justify-center space-x-6 mb-3">
-      <a href="https://www.youtube.com/@Alture-officiel" target="_blank" class="hover:text-red-500" aria-label="YouTube"><i data-lucide="youtube" class="w-5 h-5"></i></a>
-      <a href="https://twitter.com/AltureFR" target="_blank" class="hover:text-sky-500" aria-label="Twitter"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+        <div class="flex gap-8 text-gray-400">
+          <a href="/projects" class="hover:text-white hover:scale-110 flex items-center gap-2">
+            Nos projets
+          </a>
+          <a href="https://forms.gle/895TxeMsBPCxAMfs9" target="_blank" class="hover:text-white hover:scale-110 flex items-center gap-2">
+            Nous rejoindre
+          </a>
+        </div>
+      </div>
     </div>
-    <p>© 2025 Alture. Créé avec passion par <a class="font-fredoka" href="https://youtube.com/@LeVraiAlberto67">Alberto67</a>.</p>
   </footer>
-  </div>
-  <!-- Scripts -->
+
   <script>
     lucide.createIcons();
-
-    const menuBtn = document.getElementById('menuBtn');
-    const menuIcon = document.getElementById('menuIcon');
-    const mobileMenu = document.getElementById('mobileMenu');
-    let menuOpen = false;
-
-    menuBtn.addEventListener('click', () => {
-      menuOpen = !menuOpen;
-      mobileMenu.classList.toggle('hidden', !menuOpen);
-      menuBtn.innerHTML = menuOpen
-        ? `<i data-lucide="x"></i>`
-        : `<i data-lucide="menu"></i>`;
-        lucide.createIcons();
-    });
   </script>
-
 </body>
 </html>
